@@ -1,9 +1,9 @@
 # Banex Mall UI Inspiration Brief
 
 ## Reference sites
-- Lakeside Shopping Centre
-- Bluewater
-- Westfield London
+- Lakeside Shopping Centre https://lakeside-shopping.com/
+- Bluewater https://www.bluewater.co.uk/en 
+- Westfield London https://www.westfield.com/en/united-kingdom/london
 
 ## What these sites do well
 - Retail-first navigation

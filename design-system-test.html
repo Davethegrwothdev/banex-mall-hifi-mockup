@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banex Mall Design System Test</title>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <style>
+        /* Additional test-specific styles */
+        .test-section {
+            margin-bottom: var(--space-16);
+            padding: var(--space-8);
+            background: var(--color-surface-alt);
+            border-radius: var(--radius-lg);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-6);
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+        
+        .color-swatch {
+            text-align: center;
+            padding: var(--space-4);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--color-border);
+        }
+        
+        .color-box {
+            width: 100%;
+            height: 60px;
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--space-2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">Banex Mall</a>
+            <nav class="header__nav desktop-only">
+                <a href="#" class="header__nav-link header__nav-link--active">Shop</a>
+                <a href="#" class="header__nav-link">Eat</a>
+                <a href="#" class="header__nav-link">Play</a>
+                <a href="#" class="header__nav-link">What's On</a>
+                <a href="#" class="header__nav-link">Offers</a>
+                <a href="#" class="header__nav-link">Plan Visit</a>
+            </nav>
+            <div class="header__actions">
+                <button class="btn btn-icon btn-ghost">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="btn btn-primary btn-sm">Visit Us</button>
+                <button class="btn btn-icon btn-ghost mobile-only">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: var(--space-20);">
+        
+        <!-- Typography Test -->
+        <section class="test-section">
+            <h1>Typography System</h1>
+            <h2>Heading 2 - Premium Display Font</h2>
+            <h3>Heading 3 - Component Titles</h3>
+            <p>This is body text using Plus Jakarta Sans. The design system includes comprehensive typography scaling from text-xs (12px) to text-6xl (60px) with proper line heights and spacing.</p>
+            <p class="text-muted">This is muted text for secondary information.</p>
+            <p class="text-accent">This is accent colored text for highlights.</p>
+        </section>
+
+        <!-- Color Palette Test -->
+        <section class="test-section">
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-brand-primary);"></div>
+                    <strong>Primary</strong>
+                    <small>#2E3192</small>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-brand-accent);"></div>
+                    <strong>Accent</strong>
+                    <small>#F7941D</small>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-premium-navy);"></div>
+                    <strong>Premium Navy</strong>
+                    <small>#000040</small>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-premium-gold);"></div>
+                    <strong>Premium Gold</strong>
+                    <small>#FFD700</small>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-success);"></div>
+                    <strong>Success</strong>
+                    <small>#10B981</small>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: var(--color-warning);"></div>
+                    <strong>Warning</strong>
+                    <small>#F59E0B</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button System Test -->
+        <section class="test-section">
+            <h2>Button System</h2>
+            <div class="test-grid">
+                <div>
+                    <h3>Primary Actions</h3>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4);">
+                        <button class="btn btn-primary">Primary Button</button>
+                        <button class="btn btn-primary btn-sm">Small Primary</button>
+                        <button class="btn btn-primary btn-lg">Large Primary</button>
+                        <button class="btn btn-primary btn-loading">Loading State</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Secondary Actions</h3>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-4);">
+                        <button class="btn btn-secondary">Secondary</button>
+                        <button class="btn btn-outline">Outline</button>
+                        <button class="btn btn-ghost">Ghost</button>
+                        <button class="btn btn-premium">Premium Gold</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Icon Buttons</h3>
+                    <div style="display: flex; gap: var(--space-2); margin-top: var(--space-4);">
+                        <button class="btn btn-icon btn-primary">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <button class="btn btn-icon btn-secondary">
+                            <span class="material-symbols-outlined">share</span>
+                        </button>
+                        <button class="btn btn-icon btn-outline">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Components Test -->
+        <section class="test-section">
+            <h2>Card Components</h2>
+            <div class="test-grid">
+                <!-- Store Card -->
+                <div class="store-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=200&fit=crop" alt="Nike Store" class="store-card__image">
+                    <div class="store-card__content">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=48&h=48&fit=crop" alt="Nike Logo" class="store-card__logo">
+                        <h3 class="store-card__name">Nike</h3>
+                        <p class="store-card__category">Sportswear & Footwear</p>
+                        <div class="store-card__meta">
+                            <span class="store-card__floor">Ground Floor</span>
+                            <span class="store-card__status store-card__status--open">Open Now</span>
+                        </div>
+                        <div class="store-card__actions">
+                            <button class="btn btn-primary btn-sm">View Store</button>
+                            <button class="btn btn-icon btn-ghost">
+                                <span class="material-symbols-outlined">directions</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400&h=160&fit=crop" alt="Live Music Event" class="event-card__banner">
+                    <div class="event-card__date-badge">
+                        <div>DEC</div>
+                        <div>25</div>
+                    </div>
+                    <div class="event-card__content">
+                        <h3 class="event-card__title">Christmas Concert</h3>
+                        <div class="event-card__details">
+                            <div class="event-card__detail">
+                                <span class="material-symbols-outlined">schedule</span>
+                                <span>7:00 PM - 10:00 PM</span>
+                            </div>
+                            <div class="event-card__detail">
+                                <span class="material-symbols-outlined">location_on</span>
+                                <span>Central Atrium</span>
+                            </div>
+                        </div>
+                        <div class="event-card__price">₦5,000</div>
+                        <span class="event-card__countdown">2 days left</span>
+                    </div>
+                </div>
+
+                <!-- Promo Card -->
+                <div class="promo-card">
+                    <div class="promo-card__ribbon">50% OFF</div>
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=120&fit=crop" alt="Sale" class="promo-card__image">
+                    <div class="promo-card__content">
+                        <div class="promo-card__discount">Half Price Sale</div>
+                        <p class="promo-card__store">All Fashion Stores</p>
+                        <span class="promo-card__timer">Ends in 3 hours</span>
+                    </div>
+                </div>
+
+                <!-- Category Card -->
+                <div class="category-card">
+                    <div class="category-card__icon">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </div>
+                    <h3 class="category-card__title">Fashion</h3>
+                    <p class="category-card__count">45 Stores</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badge System Test -->
+        <section class="test-section">
+            <h2>Badge System</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4);">
+                <span class="badge badge--new">New</span>
+                <span class="badge badge--featured">Featured</span>
+                <span class="badge badge--discount">50% Off</span>
+                <span class="badge badge--closing-soon">Closing Soon</span>
+                <span class="badge badge--vip">VIP</span>
+                <span class="badge badge--free-parking">Free Parking</span>
+                <span class="badge badge--family-friendly">Family Friendly</span>
+                <span class="badge badge--luxury">Luxury</span>
+            </div>
+        </section>
+
+        <!-- Form Components Test -->
+        <section class="test-section">
+            <h2>Form Components</h2>
+            <form style="max-width: 400px; margin-top: var(--space-6);">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="Enter your email">
+                    <div class="form-error">Please enter a valid email address</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Success State</label>
+                    <input type="text" class="form-input form-input--success" value="Valid input">
+                    <div class="form-success">Looks good!</div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-input" rows="4" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Form</button>
+            </form>
+        </section>
+
+        <!-- Search & Filter Test -->
+        <section class="test-section">
+            <h2>Search & Filter System</h2>
+            <div class="search-container" style="margin-bottom: var(--space-6);">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <input type="text" class="search-input" placeholder="Search stores, events, or offers...">
+            </div>
+            <div class="filter-chips">
+                <span class="filter-chip filter-chip--active">All Stores</span>
+                <span class="filter-chip">Fashion</span>
+                <span class="filter-chip">Electronics</span>
+                <span class="filter-chip">Food & Dining</span>
+                <span class="filter-chip">Entertainment</span>
+                <span class="filter-chip">Services</span>
+            </div>
+        </section>
+
+        <!-- Grid System Test -->
+        <section class="test-section">
+            <h2>Responsive Grid System</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style="margin-top: var(--space-6);">
+                <div class="card" style="padding: var(--space-4); text-align: center;">
+                    <h4>Mobile: 1 Column</h4>
+                    <p>Tablet: 2 Columns</p>
+                    <p>Desktop: 3 Columns</p>
+                </div>
+                <div class="card" style="padding: var(--space-4); text-align: center;">
+                    <h4>Responsive</h4>
+                    <p>Grid System</p>
+                    <p>Built-in</p>
+                </div>
+                <div class="card" style="padding: var(--space-4); text-align: center;">
+                    <h4>Auto-fit</h4>
+                    <p>Min-max</p>
+                    <p>Columns</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation Test -->
+        <section class="test-section">
+            <h2>Interaction Animations</h2>
+            <div class="test-grid">
+                <div class="card hover-lift" style="padding: var(--space-6); text-align: center;">
+                    <h4>Hover Lift</h4>
+                    <p>Cards lift on hover</p>
+                </div>
+                <div class="card hover-scale" style="padding: var(--space-6); text-align: center;">
+                    <h4>Hover Scale</h4>
+                    <p>Elements scale on hover</p>
+                </div>
+                <div class="card fade-up" style="padding: var(--space-6); text-align: center;">
+                    <h4>Fade Up</h4>
+                    <p>Elements fade in with motion</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty State Test -->
+        <section class="test-section">
+            <h2>Empty State</h2>
+            <div class="empty-state">
+                <div class="empty-state__icon">
+                    <span class="material-symbols-outlined">storefront</span>
+                </div>
+                <h3 class="empty-state__title">No stores found</h3>
+                <p class="empty-state__description">Try adjusting your search or filter criteria to find what you're looking for.</p>
+                <button class="btn btn-primary">Clear Filters</button>
+            </div>
+        </section>
+
+        <!-- Skeleton Test -->
+        <section class="test-section">
+            <h2>Loading States</h2>
+            <div class="test-grid">
+                <div class="skeleton skeleton-card"></div>
+                <div>
+                    <div class="skeleton skeleton-text skeleton-text--lg"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                    <div class="skeleton skeleton-avatar"></div>
+                    <div style="flex: 1;">
+                        <div class="skeleton skeleton-text skeleton-text--lg"></div>
+                        <div class="skeleton skeleton-text"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple animation trigger for fade-up elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-up--visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add some interactivity to demonstrate hover states
+        document.querySelectorAll('.store-card, .event-card, .promo-card').forEach(card => {
+            card.addEventListener('click', () => {
+                console.log('Card clicked:', card);
+            });
+        });
+    </script>
+</body>
+</html>
