@@ -1,0 +1,37 @@
+{
+  "hours": [
+    { "day": "Monday - Thursday", "time": "10:00 AM - 9:00 PM" },
+    { "day": "Friday - Saturday", "time": "10:00 AM - 10:00 PM" },
+    { "day": "Sunday", "time": "12:00 PM - 8:00 PM" }
+  ],
+  "parking": {
+    "totalSpaces": 2500,
+    "evCharging": 50,
+    "disabledSpaces": 80,
+    "rates": [
+      { "duration": "0-2 hours", "price": "₦500" },
+      { "duration": "2-4 hours", "price": "₦800" },
+      { "duration": "4+ hours", "price": "₦1,500" },
+      { "duration": "Daily Maximum", "price": "₦2,500" }
+    ]
+  },
+  "directions": [
+    { "type": "By Car", "description": "Located on Lekki-Epe Expressway, 15 minutes from Victoria Island" },
+    { "type": "By Bus", "description": "Lekki bus stop, 5-minute walk from the mall entrance" },
+    { "type": "By Ferry", "description": "Tafawa Balewa Square ferry to Lekki, then 10-minute taxi" }
+  ],
+  "services": [
+    { "name": "Guest Services", "icon": "concierge", "description": "Information, lost & found, and visitor assistance" },
+    { "name": "Wheelchair Rental", "icon": "accessibility", "description": "Free mobility aids available at Guest Services" },
+    { "name": "Valet Parking", "icon": "car", "description": "Premium valet service at main entrance" },
+    { "name": "Prayer Room", "icon": "mosque", "description": "Multi-faith prayer room on 2nd floor" },
+    { "name": "Baby Changing", "icon": "baby", "description": "Family rooms on all floors" },
+    { "name": "ATM Zone", "icon": "bank", "description": "All major Nigerian banks available" }
+  ],
+  "contact": {
+    "phone": "+234 700 BANEXMALL",
+    "email": "info@banexmall.com",
+    "whatsapp": "+234 809 123 4567",
+    "address": "Lekki-Epe Expressway, Lekki Peninsula, Lagos"
+  }
+}

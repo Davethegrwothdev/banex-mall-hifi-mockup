@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banex Mall - Luxury Design System Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <style>
+        .preview-section {
+            padding: var(--space-3xl) 0;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+        }
+        
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-premium);
+            margin-bottom: var(--space-sm);
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .typography-sample {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .component-showcase {
+            background: rgba(26, 26, 46, 0.3);
+            border-radius: var(--radius-premium);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-xl);
+            border: 1px solid rgba(201, 169, 97, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="preview-section">
+            <h1 class="h1">Banex Mall Design System</h1>
+            <p class="body-large">Luxury retail experience redefined with sophisticated warmth and premium craftsmanship.</p>
+        </header>
+
+        <!-- Color Palette -->
+        <section class="preview-section">
+            <h2 class="h2">Luxury Color Palette</h2>
+            <div class="card-grid--compact">
+                <div class="card">
+                    <div class="color-swatch" style="background: var(--color-void);"></div>
+                    <h5 class="h5">Void</h5>
+                    <p class="micro">#0A0E27 - Deep midnight elegance</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: var(--color-primary);"></div>
+                    <h5 class="h5">Primary Gold</h5>
+                    <p class="micro">#B8860B - Wealth, prestige</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: var(--color-accent);"></div>
+                    <h5 class="h5">Champagne</h5>
+                    <p class="micro">#C9A961 - Luxury, celebration</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: var(--color-surface);"></div>
+                    <h5 class="h5">Surface</h5>
+                    <p class="micro">#1A1A2E - Sophisticated depth</p>
+                </div>
+                <div class="card">
+                    <div class="color-swatch" style="background: var(--color-highlight);"></div>
+                    <h5 class="h5">Ruby</h5>
+                    <p class="micro">#E94560 - Energy, fashion</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Colors -->
+        <section class="preview-section">
+            <h2 class="h2">Retail Category Colors</h2>
+            <div class="component-showcase">
+                <div class="filter-pills">
+                    <span class="filter-pill active badge-fashion">Fashion</span>
+                    <span class="filter-pill badge-dining">Dining</span>
+                    <span class="filter-pill badge-tech">Technology</span>
+                    <span class="filter-pill badge-lifestyle">Lifestyle</span>
+                    <span class="filter-pill badge-entertainment">Entertainment</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="preview-section">
+            <h2 class="h2">Premium Typography</h2>
+            <div class="typography-sample">
+                <h1 class="h1">Display Headline - Playfair Display</h1>
+                <p class="body-large">Sophisticated luxury retail experience for the modern Lagos shopper.</p>
+            </div>
+            <div class="typography-sample">
+                <h2 class="h2">Section Heading - Playfair Display Light</h2>
+                <p class="body">Body text in Inter - Modern, readable, and perfectly balanced for editorial content across all devices.</p>
+            </div>
+            <div class="typography-sample">
+                <h3 class="h3">Card Title - Premium Weight</h3>
+                <h4 class="h4">Subtitle - Semibold Clarity</h4>
+                <h5 class="h5">LABEL TEXT - MONTSERRAT UPPERCASE</h5>
+                <h6 class="h6">Micro Labels - Wide Tracking</h6>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="preview-section">
+            <h2 class="h2">Luxury Button System</h2>
+            <div class="component-showcase">
+                <div style="display: flex; gap: var(--space-lg); flex-wrap: wrap; margin-bottom: var(--space-xl);">
+                    <button class="btn btn-primary">Primary CTA</button>
+                    <button class="btn btn-secondary">Secondary Action</button>
+                    <button class="btn btn-glass">Glass Button</button>
+                </div>
+                <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                    <span class="badge badge-primary">Premium</span>
+                    <span class="badge badge-secondary">Standard</span>
+                    <span class="badge badge-accent">Featured</span>
+                    <span class="badge badge-glass">Glass</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="preview-section">
+            <h2 class="h2">Premium Card System</h2>
+            <div class="card-grid--compact">
+                <div class="card">
+                    <h3 class="h3">Standard Card</h3>
+                    <p class="body">Subtle elevation with warm gold accents and sophisticated hover interactions.</p>
+                    <div class="store-card__meta">
+                        <span class="micro">Premium finish</span>
+                        <span class="badge badge-primary">New</span>
+                    </div>
+                </div>
+                <div class="glass-card">
+                    <h3 class="h3">Glass Card</h3>
+                    <p class="body">Ethereal transparency with champagne gold borders and premium backdrop blur.</p>
+                    <div class="store-card__meta">
+                        <span class="micro">Transparent</span>
+                        <span class="badge badge-glass">Exclusive</span>
+                    </div>
+                </div>
+                <div class="utility-card">
+                    <div class="utility-card__icon">📍</div>
+                    <h4 class="h4">Utility Card</h4>
+                    <p class="body">Information architecture with warm glass effects and premium utility styling.</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Cards -->
+        <section class="preview-section">
+            <h2 class="h2">Store Showcase Cards</h2>
+            <div class="card-grid--compact">
+                <div class="store-card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=200&fit=crop" alt="Luxury fashion" class="store-card__image">
+                    <div class="store-card__content">
+                        <h3 class="store-card__title">ZARA Fashion</h3>
+                        <p class="store-card__description">Contemporary fashion with international style and premium quality.</p>
+                        <div class="store-card__meta">
+                            <span class="store-card__floor">Level 2</span>
+                            <span class="store-card__category">Fashion</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="store-card">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=200&fit=crop" alt="Fine dining" class="store-card__image">
+                    <div class="store-card__content">
+                        <h3 class="store-card__title">The Golden Spoon</h3>
+                        <p class="store-card__description">Exquisite dining experience with world-class cuisine and service.</p>
+                        <div class="store-card__meta">
+                            <span class="store-card__floor">Level 3</span>
+                            <span class="store-card__category">Dining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Cards -->
+        <section class="preview-section">
+            <h2 class="h2">Exclusive Offers</h2>
+            <div class="card-grid--compact">
+                <div class="promo-card">
+                    <span class="promo-card__badge badge badge-primary">Limited Time</span>
+                    <h3 class="promo-card__title">Summer Collection</h3>
+                    <p class="promo-card__description">Discover the latest summer trends with 30% off selected items.</p>
+                    <p class="promo-card__expires">Ends in 5 days</p>
+                </div>
+                <div class="promo-card">
+                    <span class="promo-card__badge badge badge-accent">New</span>
+                    <h3 class="promo-card__title">VIP Shopping Night</h3>
+                    <p class="promo-card__description">Exclusive after-hours shopping with champagne and personal styling.</p>
+                    <p class="promo-card__expires">This Friday</p>
+                </div>
+ Tucker
+            </div>
+        </section>
+
+ <!-- Hero Section Preview -->
+        <section class="preview-section">
+            <h2 class="h2">Hero Section</h2>
+            <div class="hero" style="border-radius: var(--radius-premium); margin-bottom: var(--space-xl);">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover Banex Mall</h1>
+                    <p class="hero-subtitle">Experience luxury shopping, world-class dining, and premium entertainment in the heart of Lekki.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary">Explore Stores</button>
+                        <button class="btn btn-secondary">Plan Your Visit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Preview -->
+        <section class="preview-section">
+            <h2 class="h2">Premium Navigation</h2>
+            <div class="component-showcase">
+                <div style="display: flex; gap: var(--space-xl); flex-wrap: wrap; align-items: center;">
+                    <a href="#" class="nav-link">Shop</a>
+                    <a href="#" class="nav-link">Dine</a>
+                    <a href="#" class="nav-link">Play</a>
+                    <a href="#" class="nav-link">Offers</a>
+                    <a href="#" class="nav-link">Visit</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="preview-section">
+            <h2 class="h2">Search & Discovery</h2>
+            <div class="component-showcase">
+                <div style="margin-bottom: var(--space-xl);">
+                    <input type="search" class="search-input" placeholder="Search stores, brands, or categories...">
+                </div>
+                <div class="filter-pills">
+                    <span class="filter-pill active">All Stores</span>
+                    <span class="filter-pill">Fashion</span>
+                    <span class="filter-pill">Dining</span>
+                    <span class="filter-pill">Technology</span>
+                    <span class="filter-pill">Lifestyle</span>
+                    <span class="filter-pill">Entertainment</span>
+                </div>
+            </div>
+        </section>
+
+ <!-- Final CTA -->
+        <section class="preview-section" style="text-align: center; border-bottom: none;">
+            <h2 class="h2">Ready to Experience Luxury?</h2>
+            <p class="body-large" style="max-width: 600px; margin: 0 auto var(--space-xl);">
+                This design system brings sophisticated warmth to the Banex Mall experience, 
+                combining international luxury standards with Lagos energy and vibrancy.
+            </p>
+            <div style="display: flex; gap: var(--space-lg); justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary">Start Building</button>
+                <button class="btn btn-secondary">View Guidelines</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

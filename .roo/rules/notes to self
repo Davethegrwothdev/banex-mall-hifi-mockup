@@ -1,0 +1,852 @@
+Perfect. Now we move from **“design spec” → “agent production workspace.”**
+This will give **MiniMax + Kimi + Roo + OpenRouter** a **clean, low-error, reusable build machine** for Banex Mall and future premium UI projects.
+
+I’ll break this into **4 layers**:
+
+1. **Ready-to-run folder structure**
+2. **Exact starter prompts per page**
+3. **Best Roo + OpenRouter settings for Kimi/MiniMax**
+4. **Best VS Code extensions + MCP servers + reusable skills**
+
+---
+
+# 🚀 1) READY-TO-RUN FOLDER STRUCTURE
+
+This is optimized for:
+
+* vanilla HTML
+* CSS
+* JS
+* serverless deploy
+* modular sections
+* agent-safe generation
+* visual-first builds
+
+```bash
+/banex-mall-hifi-mockup
+│
+├── /assets
+│   ├── /images
+│   │   ├── hero/
+│   │   ├── stores/
+│   │   ├── dining/
+│   │   ├── events/
+│   │   └── map/
+│   │
+│   ├── /icons
+│   ├── /logos
+│   └── /fonts
+│
+├── /data
+│   ├── stores.json
+│   ├── events.json
+│   ├── promos.json
+│   ├── categories.json
+│   └── visit-info.json
+│
+├── /partials
+│   ├── header.html
+│   ├── mobile-drawer.html
+│   ├── footer.html
+│   ├── store-card.html
+│   ├── promo-card.html
+│   ├── utility-card.html
+│   └── faq-item.html
+│
+├── /styles
+│   ├── tokens.css
+│   ├── base.css
+│   ├── layout.css
+│   ├── components.css
+│   ├── animations.css
+│   ├── responsive.css
+│   └── pages/
+│       ├── home.css
+│       ├── stores.css
+│       ├── store-detail.css
+│       ├── whats-on.css
+│       └── visit.css
+│
+├── /scripts
+│   ├── app.js
+│   ├── nav.js
+│   ├── animations.js
+│   ├── search.js
+│   ├── filters.js
+│   ├── countdown.js
+│   ├── map-preview.js
+│   └── page/
+│       ├── home.js
+│       ├── stores.js
+│       ├── detail.js
+│       ├── events.js
+│       └── visit.js
+│
+├── /pages
+│   ├── stores.html
+│   ├── store-detail.html
+│   ├── whats-on.html
+│   └── visit.html
+│
+├── index.html
+├── prompt-library.md
+├── build-rules.md
+└── README.md
+```
+
+---
+
+# 🎯 2) EXACT STARTER PROMPTS FOR EACH PAGE
+
+These are optimized for **Kimi = architecture/design polish** and **MiniMax = fast implementation**.
+
+---
+
+## 🏠 HOMEPAGE PROMPT
+
+```text
+Build the Banex Mall homepage in vanilla HTML, CSS, and JavaScript.
+
+Requirements:
+- sticky transparent nav that solidifies on scroll
+- cinematic hero section
+- bold headline: Discover Banex Mall
+- subcopy about stores, offers, and events in Lekki
+- two CTAs
+- quick action chips
+- featured store cards
+- events and offers strip
+- dining and entertainment section
+- map teaser
+- plan your visit utility section
+- premium footer
+
+Design:
+- luxury retail destination
+- deep navy surfaces
+- orange accents
+- glassmorphism cards
+- hover lift
+- fade-up animations
+- mobile-first
+- creative agency polish
+```
+
+---
+
+## 🛍️ STORE DIRECTORY PROMPT
+
+```text
+Build the store discovery page for Banex Mall.
+
+Requirements:
+- page hero
+- search input
+- filter pills
+- masonry or premium grid layout
+- beautiful store cards
+- featured this week rail
+- empty state
+- mobile horizontal category chips
+
+Focus:
+Make browsing feel editorial and premium like a luxury mall directory.
+```
+
+---
+
+## 🏪 STORE DETAIL PAGE PROMPT
+
+```text
+Build a premium store detail page.
+
+Sections:
+- full-width hero image
+- store logo
+- store description
+- opening hours
+- floor badge
+- whatsapp CTA
+- map location preview
+- similar stores carousel
+- sticky mobile CTA bar
+
+Visual direction:
+premium retail storytelling page
+```
+
+---
+
+## 🎉 WHAT’S ON PAGE PROMPT
+
+```text
+Build the Banex Mall events and offers page.
+
+Sections:
+- live now rail
+- upcoming events grid
+- offers section
+- countdown badges
+- recently ended archive strip
+- CTA hover interactions
+- smooth reveal animations
+
+Goal:
+Make the mall feel alive today.
+```
+
+---
+
+## 🚗 PLAN VISIT PAGE PROMPT
+
+```text
+Build the Plan Your Visit page.
+
+Include:
+- opening hours
+- getting here
+- parking
+- accessibility
+- guest services
+- map block
+- faq accordion
+- contact CTA
+- whatsapp quick help
+
+Design:
+premium utility page with polished modern cards
+```
+
+---
+
+# ⚙️ 3) BEST ROO + OPENROUTER SETTINGS (VERY IMPORTANT)
+
+Your errors are likely from **wrong model routing + context misuse + extension conflicts**.
+
+MiniMax performs extremely well for coding/agent loops and explicitly recommends **preserving reasoning between turns**, which is critical in Roo multi-step workflows. ([OpenRouter][1])
+
+## ✅ Best models to use
+
+### For Kimi role
+
+Use:
+
+```text
+moonshotai/kimi-k2
+```
+
+Best for:
+
+* UI architecture
+* refactors
+* long-context design systems
+* page planning
+* multi-file awareness
+
+---
+
+### For MiniMax role
+
+Use:
+
+```text
+minimax/minimax-m2.5
+```
+
+This is currently stronger than older M2 variants for agentic coding. ([OpenRouter][1])
+
+Best for:
+
+* multi-file edits
+* compile/fix loops
+* repetitive component creation
+* fast page generation
+
+---
+
+## ✅ Roo mode settings
+
+Use **2 custom modes**:
+
+---
+
+## 🎨 MODE 1: UI ARCHITECT
+
+```json
+{
+  "temperature": 0.6,
+  "max_tokens": 12000,
+  "context_window": 120000,
+  "reasoning": "medium"
+}
+```
+
+Use for:
+
+* homepage
+* visual systems
+* motion planning
+* tokens.css
+* component systems
+
+---
+
+## ⚡ MODE 2: BUILD EXECUTOR
+
+```json
+{
+  "temperature": 0.2,
+  "max_tokens": 8000,
+  "context_window": 64000,
+  "reasoning": "high"
+}
+```
+
+Use for:
+
+* HTML sections
+* CSS files
+* bug fixing
+* responsive passes
+* JS interactions
+
+---
+
+## 🚨 Roo error reduction checklist
+
+These solve 80% of Roo problems:
+
+* disable **Continue**
+* disable **Cline**
+* disable **GitHub Copilot Chat**
+* use only **one AI coding extension active**
+* trust workspace
+* split tasks by page, not whole site
+* never generate more than **2 files per task**
+* keep prompt-library.md in root
+* use JSON mock data instead of inline arrays
+
+The Roo MCP ecosystem also notes extension conflicts as a common cause of instability. ([MCP Stack][2])
+
+---
+
+# 🔌 4) BEST EXTENSIONS FOR YOUR STACK
+
+Use these only:
+
+## Essential
+
+* Roo Code
+* Error Lens
+* Prettier
+* HTML CSS Support
+* Auto Rename Tag
+* Path Intellisense
+* Live Server
+* Image Preview
+* JSON Crack (for data visualization)
+
+## UI polish
+
+* SVG Preview
+* CSS Peek
+* Color Highlight
+* Tailwind IntelliSense *(for inspiration even if vanilla CSS)*
+
+---
+
+# 🔗 5) MCP SERVERS THAT WILL 10X BUILDS
+
+For Roo, MCP is your real multiplier.
+
+## Best MCP servers
+
+### 🖼️ Figma / design extraction
+
+Use for:
+
+* turning screenshots into layouts
+* style extraction
+* spacing systems
+
+### 🌐 Browser / Playwright MCP
+
+Use for:
+
+* visual QA
+* screenshot diffs
+* hover state testing
+* mobile responsiveness checks
+
+### 📁 Filesystem MCP
+
+Use for:
+
+* component reuse
+* partial loading
+* template duplication
+
+### 🔍 Search MCP
+
+Use for:
+
+* pulling inspiration
+* checking competitor malls
+* store descriptions
+* offers copy
+
+### 📦 GitHub MCP
+
+Use for:
+
+* version snapshots
+* branch experiments
+* rollback safety
+
+A unified MCP layer can massively improve Roo workflows when configured correctly. ([agentpatch.ai][3])
+
+---
+
+# 🧠 6) THE “SKILLS” LIBRARY YOU SHOULD SAVE
+
+Create:
+
+```bash
+/skills
+  hero-sections.md
+  premium-cards.md
+  mall-directory-ui.md
+  event-countdown-ui.md
+  map-preview-ui.md
+  luxury-footer.md
+  mobile-drawer.md
+```
+
+Each file contains:
+
+* exact prompt
+* UI rules
+* accepted spacing
+* interaction states
+* fallback layout
+* mobile behavior
+
+This becomes your **agent memory OS**.
+
+---
+
+# 🏆 THE WINNING WORKFLOW
+
+The best close-fast flow is:
+
+> **Kimi → homepage architecture + design tokens**
+> **MiniMax → implement HTML/CSS/JS sections**
+> **Kimi → polish spacing, motion, visual hierarchy**
+> **MiniMax → responsive + bug fixes**
+
+That loop gives **creative-agency-level output fast**.
+
+---
+
+Your biggest unlock now is not just the code.
+
+It is:
+
+> **a reusable Banex “Mall Experience Framework”**
+> that can later be cloned for:
+
+* mixed-use malls
+* plazas
+* event arenas
+* retail parks
+* luxury real estate showcases
+
+If you want, next I can help you build the **exact `prompt-library.md` and `build-rules.md` files** so Roo becomes dramatically more stable.
+
+[1]: https://openai.luzhipeng.com/minimax/minimax-m2.5?utm_source=chatgpt.com "MiniMax M2.5 - API Pricing & Providers | OpenRouter"
+[2]: https://mcp.harishgarg.com/use/agentmode/mcp-server/with/roo-code?utm_source=chatgpt.com "AgentMode + Roo Code: MCP Setup Guide (2026)"
+[3]: https://agentpatch.ai/blog/best-tool-platforms-roo-code-2026/?utm_source=chatgpt.com "Best Tool Platforms for Roo Code in 2026 — AgentPatch"
+
+
+
+Perfect. This is the **exact first 60-minute sprint checklist** that gives you the highest probability of a **client-closing, creative-agency-grade Banex Mall homepage**.
+
+The goal of this sprint is **NOT the whole website**.
+
+The goal is:
+
+> **Create a stunning homepage shell + lock the visual system**
+> so every later page inherits premium quality.
+
+This follows the PRD’s priority of homepage-as-experience-layer, store discovery, offers, map teaser, and visit utility. 
+
+---
+
+# ⏱️ FIRST 60-MINUTE BUILD SPRINT CHECKLIST
+
+## 🎯 Sprint objective
+
+At the end of 60 minutes you must have:
+
+* premium homepage shell
+* frozen design language
+* reusable card system
+* hero that sells the mall
+* mobile nav working
+* first featured store cards
+* believable offers strip
+
+If this is done well, the client will already “see the future.”
+
+---
+
+# 🕐 MINUTE 0–5 → WORKSPACE LOCK-IN
+
+## Goal
+
+Prevent the exact instability that caused your bad builds.
+
+### Actions
+
+### 1) Open only this workspace
+
+```bash id="xew7wp"
+/banex-mall-hifi-mockup
+```
+
+### 2) Disable extension conflicts
+
+Keep ON:
+
+* Roo
+* Error Lens
+* Prettier
+* Live Server
+* CSS Peek
+
+Turn OFF:
+
+* Copilot Chat
+* Continue
+* Cline
+* duplicate AI coding tools
+
+### 3) Open these files side-by-side
+
+* `prompt-library.md`
+* `build-rules.md`
+* `styles/tokens.css`
+* `index.html`
+
+### 4) Open Live Server immediately
+
+This keeps visual feedback tight.
+
+✅ **Checkpoint:** clean workspace, no tool noise
+
+---
+
+# 🕔 MINUTE 5–15 → DESIGN LANGUAGE FREEZE
+
+## Goal
+
+Lock the visual DNA before page building.
+
+This is the most important anti-failure move.
+
+### Prompt to Kimi
+
+Use the **UI Architect mode**:
+
+```text id="6rbg6x"
+Build the Banex Mall visual foundation.
+
+Create:
+- styles/tokens.css
+- styles/base.css
+- styles/components.css
+
+Use:
+- #2E3192 primary
+- #F7941D accent
+- deep navy surfaces
+- large radius
+- premium shadows
+- glass cards
+- editorial spacing
+- bold hero typography
+- CTA button system
+- chip system
+- card system
+```
+
+### Required output
+
+By minute 15 you need:
+
+* color tokens
+* spacing tokens
+* heading scale
+* button classes
+* card base class
+* chip styles
+* badge styles
+
+🚨 **Do NOT move on until this looks premium**
+
+✅ **Checkpoint:** hero, cards, and buttons can all share the same visual system
+
+---
+
+# 🕒 MINUTE 15–30 → HERO + NAV ONLY
+
+## Goal
+
+Build the homepage first impression.
+
+This closes clients emotionally.
+
+### Use Kimi first
+
+Prompt:
+
+```text id="48iqxy"
+Build the Banex Mall homepage header and hero only.
+
+Requirements:
+- sticky transparent nav
+- logo area
+- menu: Shop, Eat, Play, Offers, Map, Visit
+- CTA button
+- cinematic full-screen hero
+- headline: Discover Banex Mall
+- subcopy around stores, events, and offers
+- primary CTA
+- secondary CTA
+- soft animated background glow
+- fade-up text animation
+- mobile nav drawer trigger
+```
+
+### Then MiniMax
+
+Tell MiniMax:
+
+```text id="2x4kvn"
+Implement the exact HTML/CSS/JS for the sticky nav, mobile drawer, and cinematic hero using the existing design tokens.
+```
+
+### What must be visually true
+
+* hero fills screen beautifully
+* nav feels premium
+* buttons look luxurious
+* typography is bold
+* CTA visible above fold
+* mobile drawer works
+
+✅ **Checkpoint:** if screenshot already looks agency-grade, sprint is winning
+
+---
+
+# 🕓 MINUTE 30–40 → FEATURED STORE CARD SYSTEM
+
+## Goal
+
+Create the reusable store card primitive.
+
+This will be reused across:
+
+* homepage
+* store directory
+* similar stores
+* featured rails
+
+### Prompt MiniMax
+
+```text id="fub5w8"
+Build a reusable premium store card component.
+
+Must include:
+- image
+- store name
+- category
+- floor badge
+- short description
+- View Store CTA
+- hover lift
+- subtle image zoom
+- premium shadow
+- mobile responsiveness
+```
+
+### Build 4 sample cards
+
+Suggested sample tenants:
+
+* Nike
+* Samsung
+* Filmhouse
+* KFC
+
+Even fake content is fine.
+
+✅ **Checkpoint:** cards must feel premium enough for reuse
+
+---
+
+# 🕓 MINUTE 40–48 → “WHAT’S HAPPENING TODAY” STRIP
+
+## Goal
+
+Make the mall feel alive.
+
+This is psychologically huge for the client.
+
+### Prompt MiniMax
+
+```text id="zsp6mr"
+Build a premium homepage strip for live events and offers.
+
+Include:
+- section heading
+- 3 event/promo cards
+- live badges
+- ends soon badge
+- countdown pill
+- CTA hover
+- horizontal mobile scroll
+```
+
+### Required feel
+
+The client should feel:
+
+> “This mall always has something happening.”
+
+✅ **Checkpoint:** promo rail feels dynamic
+
+---
+
+# 🕓 MINUTE 48–55 → MAP + VISIT TEASER
+
+## Goal
+
+Close the “real-world foot traffic” story.
+
+This aligns directly with PRD goals. 
+
+### Prompt Kimi
+
+```text id="7r9kll"
+Add two homepage teaser sections:
+1) Find Your Way Around (map teaser)
+2) Plan Your Visit (hours, parking, directions cards)
+
+Use premium visual utility cards and CTA hierarchy.
+```
+
+### Visual rules
+
+* one big visual map teaser
+* 3 utility cards
+* opening hours
+* directions
+* parking
+
+✅ **Checkpoint:** user can imagine visiting today
+
+---
+
+# 🕔 MINUTE 55–60 → CREATIVE-AGENCY POLISH PASS
+
+## Goal
+
+Do the close-worthy polish.
+
+### Use Kimi only
+
+Prompt:
+
+```text id="8h1rza"
+Polish the homepage visual hierarchy.
+
+Focus:
+- hero spacing rhythm
+- heading scale
+- CTA emphasis
+- store card alignment
+- offer strip balance
+- section transitions
+- footer richness
+- mobile viewport elegance
+```
+
+### Final QA checklist
+
+Before ending sprint:
+
+* hero screenshot looks premium?
+* nav smooth?
+* mobile drawer works?
+* cards consistent?
+* no duplicate shadows?
+* no inconsistent radius?
+* CTA above fold?
+* spacing luxury-level?
+* no console errors?
+
+---
+
+# 🏆 WHAT SUCCESS LOOKS LIKE AFTER 60 MINUTES
+
+If done correctly, you should have:
+
+## Deliverables
+
+* homepage shell
+* nav
+* hero
+* featured store system
+* events strip
+* map teaser
+* visit teaser
+* frozen tokens
+* reusable cards
+* first premium screenshot for client
+
+That screenshot alone can start selling.
+
+---
+
+# 🚨 WHY THIS SPRINT WORKS
+
+Your previous builds likely failed because:
+
+* too many pages too fast
+* no frozen token system
+* no first-principles homepage focus
+* inconsistent card language
+* too much AI generation before visual review
+
+This sprint solves that by focusing on:
+
+> **one page + one design language + reusable primitives**
+
+That’s how creative agencies actually work.
+
+---
+
+## 🔥 My strongest recommendation
+
+At the **30-minute mark**, take a screenshot of the hero + featured cards.
+
+That becomes your:
+
+* client teaser
+* internal morale win
+* visual benchmark for page 2+
+
+Once the homepage visual language is locked, every other page becomes 3–5x easier.
+
+After this sprint, the smartest next move is a **30-minute “page 2 replication sprint”** where we turn the store card system into the full directory page.

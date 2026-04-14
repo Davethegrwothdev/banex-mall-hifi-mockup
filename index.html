@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banex Mall - Premium Shopping Destination in Lekki</title>
+    <meta name="description" content="Discover Banex Mall - Lekki's premier shopping destination with luxury brands, dining, entertainment, and exclusive offers.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/pages/home.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="nav-sticky" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-text">Banex</span>
+                    <span class="logo-accent">Mall</span>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#eat" class="nav-link">Eat</a>
+                <a href="#play" class="nav-link">Play</a>
+                <a href="#offers" class="nav-link">Offers</a>
+                <a href="#map" class="nav-link">Map</a>
+                <a href="#visit" class="nav-link">Visit</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-primary">Plan Your Visit</button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-overlay"></div>
+        <div class="drawer-content">
+            <div class="drawer-header">
+                <div class="logo">
+                    <span class="logo-text">Banex</span>
+                    <span class="logo-accent">Mall</span>
+                </div>
+                <button class="drawer-close" id="drawerClose">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="drawer-menu">
+                <a href="#shop" class="drawer-link">Shop</a>
+                <a href="#eat" class="drawer-link">Eat</a>
+                <a href="#play" class="drawer-link">Play</a>
+                <a href="#offers" class="drawer-link">Offers</a>
+                <a href="#map" class="drawer-link">Map</a>
+                <a href="#visit" class="drawer-link">Visit</a>
+            </div>
+            <div class="drawer-footer">
+                <button class="btn btn-primary btn-full">Plan Your Visit</button>
+                <div class="drawer-contact">
+                    <p>Need help? Call us</p>
+                    <a href="tel:+234700BANEXMALL">+234 700 BANEXMALL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-glow"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Discover Banex Mall
+                    <span class="hero-subtitle">Where Luxury Meets Lifestyle</span>
+                </h1>
+                <p class="hero-description">
+                    Experience Lekki's premier shopping destination with over 200 premium stores, 
+                    world-class dining, and exclusive entertainment. From luxury fashion to cutting-edge tech, 
+                    every visit is an adventure in style and sophistication.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-hero">
+                        Explore Stores
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary btn-hero">
+                        View Offers
+                        <i data-lucide="gift"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop" alt="Luxury Shopping" loading="lazy">
+                    </div>
+                    <div class="hero-card-content">
+                        <h3>200+ Premium Stores</h3>
+                        <p>From international brands to local designers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions" id="quickActions">
+        <div class="container">
+            <div class="actions-grid">
+                <a href="#shop" class="action-card">
+                    <div class="action-icon">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <h3>Shop</h3>
+                    <p>200+ premium stores</p>
+                </a>
+                
+                <a href="#eat" class="action-card">
+                    <div class="action-icon">
+                        <i data-lucide="utensils"></i>
+                    </div>
+                    <h3>Eat</h3>
+                    <p>World-class dining</p>
+                </a>
+                
+                <a href="#play" class="action-card">
+                    <div class="action-icon">
+                        <i data-lucide="film"></i>
+                    </div>
+                    <h3>Play</h3>
+                    <p>Entertainment & cinema</p>
+                </a>
+                
+                <a href="#offers" class="action-card">
+                    <div class="action-icon">
+                        <i data-lucide="tag"></i>
+                    </div>
+                    <h3>Offers</h3>
+                    <p>Exclusive deals</p>
+                </a>
+                
+                <a href="#map" class="action-card">
+                    <div class="action-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Map</h3>
+                    <p>Find your way</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stores -->
+    <section class="featured-stores" id="shop">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Stores</h2>
+                <p>Discover the finest brands and exclusive collections</p>
+                <a href="/pages/stores.html" class="view-all">View All Stores <i data-lucide="arrow-right"></i></a>
+            </div>
+            
+            <div class="stores-grid" id="featuredStores">
+                <!-- Store cards will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Happening -->
+    <section class="whats-happening" id="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2>What's Happening Today</h2>
+                <p>Live events, exclusive offers, and exciting experiences</p>
+            </div>
+            
+            <div class="happening-content">
+                <div class="live-now">
+                    <h3>Live Now</h3>
+                    <div class="live-events" id="liveEvents">
+                        <!-- Live events will be loaded here -->
+                </div>
+                </div>
+                
+                <div class="current-offers">
+                    <h3>Current Offers</h3>
+                    <div class="offers-grid" id="currentOffers">
+                        <!-- Offers will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining & Entertainment -->
+    <section class="dining-entertainment" id="eat">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dining & Entertainment</h2>
+                <p>From fine dining to family fun, experience it all</p>
+            </div>
+            
+            <div class="dining-grid">
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop" alt="Fine Dining">
+                    </div>
+                    <div class="dining-content">
+                        <h3>Fine Dining</h3>
+                        <p>Exquisite culinary experiences from around the world</p>
+                        <div class="dining-tags">
+                            <span class="tag">Italian</span>
+                            <span class="tag">Asian</span>
+                            <span class="tag">Continental</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop" alt="Cinema">
+                    </div>
+                    <div class="dining-content">
+                        <h3>Filmhouse Cinemas</h3>
+                        <p>Luxury cinema experience with IMAX and VIP screens</p>
+                        <div class="dining-tags">
+                            <span class="tag">IMAX</span>
+                            <span class="tag">VIP</span>
+                            <span class="tag">3D</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dining-card">
+                    <div class="dining-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop" alt="Food Court">
+                    </div>
+                    <div class="dining-content">
+                        <h3>Food Court</h3>
+                        <p>Quick bites and family favorites for every taste</p>
+                        <div class="dining-tags">
+                            <span class="tag">Fast Food</span>
+                            <span class="tag">Local</span>
+                            <span class="tag">International</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Teaser -->
+    <section class="map-teaser" id="map">
+        <div class="container">
+            <div class="map-content">
+                <div class="map-text">
+                    <h2>Find Your Way Around</h2>
+                    <p>Navigate our 4-level shopping paradise with ease. From fashion to food, entertainment to essentials - everything is just a short walk away.</p>
+                    <div class="map-features">
+                        <div class="map-feature">
+                            <i data-lucide="map"></i>
+                            <span>Interactive floor maps</span>
+                        </div>
+                        <div class="map-feature">
+                            <i data-lucide="navigation"></i>
+                            <span>Store locator</span>
+                        </div>
+                        <div class="map-feature">
+                            <i data-lucide="parking-circle"></i>
+                            <span>Parking guide</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">
+                        View Full Map
+                        <i data-lucide="external-link"></i>
+                    </button>
+                </div>
+                <div class="map-visual">
+                    <div class="map-preview">
+                        <div class="map-floor">
+                            <span>Ground Floor</span>
+                            <div class="map-stores">Fashion & Beauty</div>
+                        </div>
+                        <div class="map-floor">
+                            <span>First Floor</span>
+                            <div class="map-stores">Technology & Lifestyle</div>
+                        </div>
+                        <div class="map-floor">
+                            <span>Second Floor</span>
+                            <div class="map-stores">Dining & Entertainment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Your Visit -->
+    <section class="plan-visit" id="visit">
+        <div class="container">
+            <div class="section-header">
+                <h2>Plan Your Visit</h2>
+                <p>Everything you need for the perfect mall experience</p>
+            </div>
+            
+            <div class="visit-grid">
+                <div class="visit-card">
+                    <div class="visit-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <div class="visit-hours">
+                        <div class="hour-item">
+                            <span Mon - Thu</span>
+                            <span>10 AM - 9 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Fri - Sat</span>
+                            <span>10 AM - 10 PM</span>
+                        </div>
+                        <div class="hour-item">
+                            <span>Sunday</span>
+                            <span>12 PM - 8 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                < class="visit-card">
+                    <div class="visit-icon">
+                        <i data-lucide="car"></i>
+                    </div>
+                    <h3>Getting Here</h3>
+                    <p>Located on Lekki-Epe Expressway, 15 minutes from Victoria Island</p>
+                    <div class="visit-transport">
+                        <span class="transport-tag">By Car</span>
+                        <span class="transport-tag">By Bus</span>
+                        <span class="transport-tag">By Ferry</span>
+                    </div>
+                </div>
+                
+                <div class="visit-card">
+                    <div class="visit-icon">
+                        <i data-lucide="parking-circle"></i>
+                    </div>
+                    <h3>Parking</h3>
+                    <p>2,500 spaces with EV charging and valet service</p>
+                    <div class="visit-parking">
+                        <div class="parking-stat">
+                            <span class="stat-number">2,500</span>
+                            <span class="stat-label">Total Spaces</span>
+                        </div>
+                        <div class="parking-stat">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">EV Charging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">Banex</span>
+                        <span class="logo-accent">Mall</span>
+                    </div>
+                    <p>Lekki's premier shopping destination where luxury meets lifestyle.</p>
+                    <div class="footer-contact">
+                        <a href="tel:+234700BANEXMALL">+234 700 BANEXMALL</a>
+                        <a href="mailto:info@banexmall.com">info@banexmall.com</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Shop</h4>
+                        <a href="#">Fashion</a>
+                        <a href="#">Technology</a>
+                        <a href="#">Lifestyle</a>
+                        <a href="#">Beauty</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Dine</h4>
+                        <a href="#">Fine Dining</a>
+                        <a href="#">Food Court</a>
+                        <a href="#">Cafes</a>
+                        <a href="#">Bars</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Play</h4>
+                        <a href="#">Cinema</a>
+                        <a href="#">Kids Zone</a>
+                        <a href="#">Events</a>
+                        <a href="#">Entertainment</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Visit</h4>
+                        <a href="#">Hours</a>
+                        <a href="#">Parking</a>
+                        <a href="#">Map</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Banex Mall. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                    <a href="#"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/page/home.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

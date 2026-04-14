@@ -1,0 +1,137 @@
+:root {
+  /* Banex Mall Brand Colors - From Wireframe */
+  --color-primary: #2E3192;        /* Royal Blue - main brand */
+  --color-accent: #F7941D;         /* Amber Orange - CTAs, highlights */
+  --color-void: #0A0E27;           /* Deep midnight - backgrounds */
+  --color-surface: #121629;        /* Dark navy - cards, sections */
+  --color-surface-light: #1A1F3C;  /* Lighter surface for hover */
+  --color-soft: #F8F9FA;           /* Pearl white - text on dark */
+  
+  /* Supporting Palette */
+  --color-success: #2ECC71;        /* Emerald - confirmations */
+  --color-warning: #F39C12;        /* Amber - alerts */
+  --color-info: #5DADE2;           /* Sky - information */
+  --color-error: #E74C3C;          /* Crimson - errors */
+  --color-whatsapp: #25D366;       /* WhatsApp green */
+  
+  /* Category Colors - Premium Retail */
+  --color-fashion: #E94560;        /* Ruby - fashion */
+  --color-dining: #D4AF37;         /* Gold - culinary */
+  --color-tech: #5DADE2;           /* Sky - innovation */
+  --color-lifestyle: #9B59B6;      /* Amethyst - wellness */
+  --color-entertainment: #E67E22;  /* Carrot - fun */
+  
+  /* Text Colors - Premium Hierarchy */
+  --color-text-primary: #F8F9FA;
+  --color-text-secondary: rgba(248, 249, 250, 0.8);
+  --color-text-muted: rgba(248, 249, 250, 0.6);
+  --color-text-subtle: rgba(248, 249, 250, 0.4);
+  
+  /* Background Gradients - Sophisticated Depth */
+  --gradient-hero: linear-gradient(135deg, #0A0E27 0%, #1A1F3C 50%, #2E3192 100%);
+  --gradient-card: linear-gradient(145deg, rgba(46, 57, 146, 0.1) 0%, rgba(247, 148, 29, 0.02) 100%);
+  --gradient-cta: linear-gradient(135deg, #F7941D 0%, #FFB347 100%);
+  --gradient-cta-hover: linear-gradient(135deg, #FFB347 0%, #F7941D 100%);
+  --gradient-glow: radial-gradient(circle, rgba(247, 148, 29, 0.3) 0%, transparent 70%);
+  --gradient-premium: linear-gradient(135deg, #2E3192 0%, #4A5BB5 50%, #F7941D 100%);
+  --gradient-dark: linear-gradient(180deg, #0A0E27 0%, #121629 100%);
+  
+  /* Refined Spacing System */
+  --space-xs: 4px;       /* Micro details */
+  --space-sm: 8px;       /* Tight spacing */
+  --space-md: 16px;      /* Standard spacing */
+  --space-lg: 24px;      /* Generous spacing */
+  --space-xl: 32px;      /* Section spacing */
+  --space-2xl: 48px;     /* Major sections */
+  --space-3xl: 64px;     /* Page sections */
+  --space-hero: 96px;    /* Hero spacing */
+  --space-massive: 128px; /* Monumental moments */
+  
+  /* Luxury Shadow System */
+  --shadow-card-rest: 0 8px 24px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 16px 40px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(247, 148, 29, 0.15);
+  --shadow-hero: 0 24px 64px rgba(0, 0, 0, 0.35), 0 0 120px rgba(46, 57, 146, 0.2);
+  --shadow-cta: 0 8px 24px rgba(247, 148, 29, 0.5), 0 0 48px rgba(247, 148, 29, 0.25);
+  --shadow-cta-hover: 0 12px 32px rgba(247, 148, 29, 0.6), 0 0 64px rgba(247, 148, 29, 0.35);
+  --shadow-premium: 0 20px 40px -8px rgba(0, 0, 0, 0.3);
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-glow-orange: 0 0 40px rgba(247, 148, 29, 0.4);
+  --shadow-glow-blue: 0 0 40px rgba(46, 57, 146, 0.4);
+  
+  /* Glass Effects */
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid rgba(248, 249, 250, 0.1);
+  --glass-surface: rgba(18, 22, 41, 0.7);
+  --glass-hover: rgba(26, 31, 60, 0.85);
+  --glass-nav: rgba(10, 14, 39, 0.85);
+  
+  /* Premium Typography System */
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-accent: 'Montserrat', 'Outfit', sans-serif;
+  --font-system: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Sophisticated Type Scale */
+  --type-display: clamp(2.5rem, 6vw, 4.5rem);    /* Hero statements */
+  --type-h1: clamp(2rem, 4vw, 3rem);             /* Page titles */
+  --type-h2: clamp(1.5rem, 3vw, 2.25rem);        /* Section headers */
+  --type-h3: clamp(1.25rem, 2.5vw, 1.75rem);     /* Card titles */
+  --type-h4: clamp(1rem, 2vw, 1.375rem);         /* Subsections */
+  --type-body-large: 1.125rem;                   /* Editorial text */
+  --type-body: 1rem;                             /* Standard text */
+  --type-small: 0.875rem;                        /* Captions */
+  --type-micro: 0.75rem;                         /* Labels */
+  
+  /* Font Weights - Luxury Hierarchy */
+  --weight-light: 300;      /* Elegant headlines */
+  --weight-regular: 400;    /* Body text */
+  --weight-medium: 500;     /* Emphasis */
+  --weight-semibold: 600;   /* Strong hierarchy */
+  --weight-bold: 700;       /* Maximum impact */
+  
+  /* Line Height - Editorial Comfort */
+  --lh-tight: 1;            /* Display headlines */
+  --lh-display: 1.1;        /* Hero text */
+  --lh-heading: 1.2;        /* Section titles */
+  --lh-body: 1.6;           /* Body text */
+  --lh-relaxed: 1.8;        /* Luxury breathing room */
+  
+  /* Letter Spacing - Premium Refinement */
+  --ls-tight: -0.02em;      /* Headlines */
+  --ls-normal: 0;           /* Body text */
+  --ls-wide: 0.05em;        /* Luxury expansion */
+  --ls-wider: 0.1em;        /* Uppercase text */
+  
+  /* Refined Radius System */
+  --radius-subtle: 4px;      /* Micro refinements */
+  --radius-soft: 8px;        /* Gentle curves */
+  --radius-medium: 12px;     /* Cards */
+  --radius-premium: 16px;    /* Premium cards */
+  --radius-large: 24px;      /* Large elements */
+  --radius-xl: 32px;         /* Hero elements */
+  --radius-full: 9999px;     /* Pills, buttons */
+  
+  /* Transitions - Smooth Interactions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-smooth: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-luxury: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+  --z-toast: 700;
+  
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-max: 1600px;
+}
