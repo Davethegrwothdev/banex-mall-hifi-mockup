@@ -24,6 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeUpObserver.observe(el);
   });
 
+  // Task 5: Add staggered reveal to section children
+  // Apply staggered animation delay to section content elements
+  const sections = document.querySelectorAll('.section-standard');
+  sections.forEach(section => {
+    const children = section.querySelectorAll('.section-header, .quick-access-grid, .trending-carousel, .deals-filters, .deals-grid, .map-teaser, .visit-utility-grid, .cinema-section .featured-movie, .cinema-info-bar, .movie-carousel, .family-gallery, .family-features, .family-cta, .rating-summary, .testimonials-carousel, .instagram-section, .newsletter-content');
+    
+    children.forEach((child, index) => {
+      child.style.opacity = '0';
+      child.style.transform = 'translateY(30px)';
+      child.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionChildren = entry.target.querySelectorAll('.section-header, .quick-access-grid, .trending-carousel, .deals-filters, .deals-grid, .map-teaser, .visit-utility-grid, .cinema-section .featured-movie, .cinema-info-bar, .movie-carousel, .family-gallery, .family-features, .family-cta, .rating-summary, .testimonials-carousel, .instagram-section, .newsletter-content');
+          sectionChildren.forEach((child, index) => {
+            setTimeout(() => {
+              child.style.opacity = '1';
+              child.style.transform = 'translateY(0)';
+            }, index * 100);
+          });
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    sectionObserver.observe(section);
+  });
+
   // Parallax effect for hero (subtle)
   const heroSection = document.querySelector('.hero-section');
   if (heroSection) {

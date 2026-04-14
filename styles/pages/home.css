@@ -286,6 +286,18 @@
   line-height: 1.1;
   animation: fadeInUp 1s var(--ease-premium) 0.1s both;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  /* Gradient text fill - Task 1 */
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-brand-accent) 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradient-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
 }
 
 .hero-subtitle {
@@ -570,6 +582,17 @@
   gap: var(--space-6);
   padding: 0 var(--space-4);
   width: max-content;
+  /* Task 4: Enable carousel auto-scroll */
+  animation: carousel-scroll 30s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .carousel-item {
@@ -639,6 +662,31 @@
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
+  /* Task 6: Reduce header height on mobile */
+  .header {
+    top: 32px;
+    height: 56px;
+  }
+
+  .header__container {
+    height: 56px;
+    padding: 0 var(--space-3);
+  }
+
+  .header__logo {
+    font-size: var(--text-lg);
+  }
+
+  .live-status-bar {
+    height: 32px;
+    padding: var(--space-1) 0;
+  }
+
+  .hero-section {
+    padding-top: 90px;
+    min-height: calc(100vh - 56px);
+  }
+  
   .hero-title {
     font-size: var(--text-4xl);
   }
@@ -927,12 +975,63 @@
   color: var(--color-text-inverse);
 }
 
-/* Deals Grid - 4 columns */
+/* Deals Grid - Staggered 4→3→2 layout */
 .deals-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
   margin-bottom: var(--space-8);
+}
+
+/* Staggered layout items */
+.deals-grid .promo-card:nth-child(4n+1) {
+  grid-column: span 2;
+}
+
+.deals-grid .promo-card:nth-child(4n+2) {
+  grid-column: span 1;
+}
+
+.deals-grid .promo-card:nth-child(4n+3) {
+  grid-column: span 1;
+}
+
+.deals-grid .promo-card:nth-child(4n+4) {
+  grid-column: span 2;
+}
+
+/* Adjust for 3-column layout */
+@media (max-width: 1024px) {
+  .deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .deals-grid .promo-card:nth-child(3n+1) {
+    grid-column: span 2;
+  }
+  
+  .deals-grid .promo-card:nth-child(3n+2) {
+    grid-column: span 1;
+  }
+  
+  .deals-grid .promo-card:nth-child(3n+3) {
+    grid-column: span 2;
+  }
+}
+
+/* Adjust for 2-column layout */
+@media (max-width: 768px) {
+  .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .deals-grid .promo-card:nth-child(2n+1) {
+    grid-column: span 2;
+  }
+  
+  .deals-grid .promo-card:nth-child(2n+2) {
+    grid-column: span 2;
+  }
 }
 
 .deals-grid .promo-card {
@@ -1059,6 +1158,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-2xl);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -1536,13 +1636,19 @@
 }
 
 .utility-card--visit {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  /* Task 8: Add glassmorphism to utility cards */
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   transition: all var(--dur-base) var(--ease-standard);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
 }
 
 .utility-card--visit::before {
@@ -2114,5 +2220,189 @@
   
   .footer-social {
     justify-content: center;
+  }
+}
+
+/* ========================================
+   TASK 7: HERO VISIT MICRO-CTA
+   ======================================== */
+.hero-visit-cta {
+  margin-top: var(--space-6);
+}
+
+.visit-micro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-inverse);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--dur-base) var(--ease-standard);
+}
+
+.visit-micro-cta:hover {
+  background: var(--color-brand-accent);
+  border-color: var(--color-brand-accent);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+}
+
+.visit-micro-cta .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* ========================================
+   TASK 2: FILTER CHIP "OPEN NOW" DOT
+   ======================================== */
+.filter-chip__dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: var(--space-2);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0); }
+}
+
+/* ========================================
+   TASK 3: PARKING LIVE COUNTER
+   ======================================== */
+.parking-live-counter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(34, 197, 94, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.parking-counter__icon {
+  font-size: 18px;
+  color: #22c55e;
+}
+
+.parking-counter__count {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.parking-counter__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.parking-counter__status {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.parking-counter__status--available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.parking-counter__status--filling {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.parking-counter__status--limited {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ========================================
+   TASK 10: HOURS COUNTDOWN
+   ======================================== */
+.hours-countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(247, 148, 29, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.hours-countdown__icon {
+  font-size: 18px;
+  color: var(--color-brand-accent);
+}
+
+.hours-countdown__text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.hours-countdown__time {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-brand-accent);
+}
+
+/* ========================================
+   TASK 9: BACK TO TOP BUTTON
+   ======================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all var(--dur-base) var(--ease-standard);
+  z-index: 999;
+}
+
+.back-to-top--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--color-brand-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.back-to-top .material-symbols-outlined {
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .back-to-top {
+    bottom: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
   }
 }

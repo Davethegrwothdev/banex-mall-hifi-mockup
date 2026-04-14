@@ -75,6 +75,14 @@
                     <button class="btn btn-primary btn-lg">Explore What's On Today</button>
                     <button class="btn btn-outline btn-lg">Get Directions →</button>
                 </div>
+
+                <!-- Task 7: Add "Planning a Visit?" micro-CTA to hero -->
+                <div class="hero-visit-cta">
+                    <button class="visit-micro-cta" onclick="document.querySelector('.visit-today-section').scrollIntoView({behavior: 'smooth'})">
+                        <span class="material-symbols-outlined">directions_car</span>
+                        <span>Planning a Visit?</span>
+                    </button>
+                </div>
             </div>
             
             <!-- Scroll indicator -->
@@ -394,7 +402,7 @@
                     </div>
                 </div>
 
-                <div class="floor-switcher">
+                <div class="floor-switcher" data-floor-data='{"ground":{"stores":[{"id":1,"name":"Fashion Hub","category":"fashion","icon":"shopping_bag"},{"id":2,"name":"Food Court","category":"food","icon":"restaurant"},{"id":3,"name":"KFC Restaurant","category":"food","icon":"local_dining"},{"id":4,"name":"Zara","category":"fashion","icon":"shopping_bag"},{"id":5,"name":"Juice World","category":"food","icon":"local_cafe"},{"id":6,"name":"Accessorize","category":"fashion","icon":"access_time"}],"facilities":[{"id":1,"name":"Main Entrance","icon":"door_front"},{"id":2,"name":"Information Desk","icon":"info"},{"id":3,"name":"ATM","icon":"account_balance_wallet"},{"id":4,"name":"Parking Elevator A","icon":"elevator"}]},"first":{"stores":[{"id":7,"name":"Tech Plaza","category":"electronics","icon":"computer"},{"id":8,"name":"Samsung Store","category":"electronics","icon":"smartphone"},{"id":9,"name":"Sephora","category":"beauty","icon":"face"},{"id":10,"name":"Mothercare","category":"family","icon":"child_care"},{"id":11,"name":"Beauty Essentials","category":"beauty","icon":"spa"},{"id":12,"name":"Game Zone","category":"entertainment","icon":"sports_esports"}],"facilities":[{"id":5,"name":"Restrooms","icon":"restroom"},{"id":6,"name":"Baby Care Room","icon":"child_friendly"},{"id":7,"name":"Parking Elevator B","icon":"elevator"},{"id":8,"name":"Cinema Lobby","icon":"theaters"}]},"second":{"stores":[{"id":13,"name":"Filmhouse Cinema","category":"entertainment","icon":"local_movies"},{"id":14,"name":"Kids Carnival","category":"entertainment","icon":"celebration"},{"id":15,"name":"Family Fun Day","category":"entertainment","icon":"family_restroom"},{"id":16,"name":"Pizza Hut","category":"food","icon":"local_pizza"},{"id":17,"name":"Wicked Musical","category":"entertainment","icon":"music_note"},{"id":18,"name":"Moana 2","category":"entertainment","icon":"water"}],"facilities":[{"id":9,"name":"VIP Cinema Seats","icon":"chair"},{"id":10,"name":"3D Glasses Counter","icon":"visibility"},{"id":11,"name":"Parking Elevator C","icon":"elevator"},{"id":12,"name":"Emergency Exit","icon":"exit_to_app"}]}'>
                     <button class="floor-btn floor-btn--active" data-floor="ground">
                         <span class="floor-btn__level">G</span>
                         <span class="floor-btn__name">Ground Floor</span>
@@ -429,6 +437,10 @@
 
             <div class="deals-filters">
                 <button class="filter-chip filter-chip--active" data-filter="all">All Deals</button>
+                <button class="filter-chip" data-filter="open-now">
+                    <span class="filter-chip__dot"></span>
+                    Open Now
+                </button>
                 <button class="filter-chip" data-filter="fashion">Fashion</button>
                 <button class="filter-chip" data-filter="food">Food</button>
                 <button class="filter-chip" data-filter="entertainment">Entertainment</button>
@@ -848,6 +860,12 @@
                             <strong>Mon - Fri:</strong> 9AM - 10PM<br>
                             <strong>Weekends:</strong> 10AM - 11PM
                         </p>
+                        <!-- Task 10: Add live countdown to opening hours -->
+                        <div class="hours-countdown" id="hours-countdown">
+                            <span class="hours-countdown__icon material-symbols-outlined">timer</span>
+                            <span class="hours-countdown__text">Closes in</span>
+                            <span class="hours-countdown__time" id="closing-time">3h 20m</span>
+                        </div>
                     </div>
                 </div>
 
@@ -881,9 +899,15 @@
                         <h3 class="utility-card__title">Parking</h3>
                         <p class="utility-card__text">
                             <strong>Free parking</strong><br>
-                            500+ spaces available<br>
                             EV charging stations
                         </p>
+                        <!-- Task 3: Add parking live counter -->
+                        <div class="parking-live-counter">
+                            <span class="parking-counter__icon material-symbols-outlined">local_parking</span>
+                            <span class="parking-counter__count" id="parking-count">423</span>
+                            <span class="parking-counter__label">/ 500 spaces</span>
+                            <span class="parking-counter__status parking-counter__status--available">Available</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1140,6 +1164,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Task 9: Add footer "Back to Top" button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
 
     <script src="scripts/nav.js"></script>
     <script src="scripts/animations.js"></script>

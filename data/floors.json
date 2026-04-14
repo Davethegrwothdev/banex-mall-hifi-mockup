@@ -1,0 +1,53 @@
+{
+  "ground": {
+    "name": "Ground Floor",
+    "stores": [
+      {"id": 1, "name": "Fashion Hub", "category": "fashion", "icon": "shopping_bag"},
+      {"id": 2, "name": "Food Court", "category": "food", "icon": "restaurant"},
+      {"id": 3, "name": "KFC Restaurant", "category": "food", "icon": "local_dining"},
+      {"id": 4, "name": "Zara", "category": "fashion", "icon": "shopping_bag"},
+      {"id": 5, "name": "Juice World", "category": "food", "icon": "local_cafe"},
+      {"id": 6, "name": "Accessorize", "category": "fashion", "icon": "access_time"}
+    ],
+    "facilities": [
+      {"id": 1, "name": "Main Entrance", "icon": "door_front"},
+      {"id": 2, "name": "Information Desk", "icon": "info"},
+      {"id": 3, "name": "ATM", "icon": "account_balance_wallet"},
+      {"id": 4, "name": "Parking Elevator A", "icon": "elevator"}
+    ]
+  },
+  "first": {
+    "name": "First Floor",
+    "stores": [
+      {"id": 7, "name": "Tech Plaza", "category": "electronics", "icon": "computer"},
+      {"id": 8, "name": "Samsung Store", "category": "electronics", "icon": "smartphone"},
+      {"id": 9, "name": "Sephora", "category": "beauty", "icon": "face"},
+      {"id": 10, "name": "Mothercare", "category": "family", "icon": "child_care"},
+      {"id": 11, "name": "Beauty Essentials", "category": "beauty", "icon": "spa"},
+      {"id": 12, "name": "Game Zone", "category": "entertainment", "icon": "sports_esports"}
+    ],
+    "facilities": [
+      {"id": 5, "name": "Restrooms", "icon": "restroom"},
+      {"id": 6, "name": "Baby Care Room", "icon": "child_friendly"},
+      {"id": 7, "name": "Parking Elevator B", "icon": "elevator"},
+      {"id": 8, "name": "Cinema Lobby", "icon": "theaters"}
+    ]
+  },
+  "second": {
+    "name": "Second Floor",
+    "stores": [
+      {"id": 13, "name": "Filmhouse Cinema", "category": "entertainment", "icon": "local_movies"},
+      {"id": 14, "name": "Kids Carnival", "category": "entertainment", "icon": "celebration"},
+      {"id": 15, "name": "Family Fun Day", "category": "entertainment", "icon": "family_restroom"},
+      {"id": 16, "name": "Pizza Hut", "category": "food", "icon": "local_pizza"},
+      {"id": 17, "name": "Wicked Musical", "category": "entertainment", "icon": "music_note"},
+      {"id": 18, "name": "Moana 2", "category": "entertainment", "icon": "water"}
+    ],
+    "facilities": [
+      {"id": 9, "name": "VIP Cinema Seats", "icon": "chair"},
+      {"id": 10, "name": "3D Glasses Counter", "icon": "visibility"},
+      {"id": 11, "name": "Parking Elevator C", "icon": "elevator"},
+      {"id": 12, "name": "Emergency Exit", "icon": "exit_to_app"}
+    ]
+  }
+}
